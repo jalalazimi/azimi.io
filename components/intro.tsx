@@ -1,23 +1,22 @@
-import { CMS_NAME } from '../lib/constants'
+import React from "react";
+import Header from '../components/header'
 
 const Intro = () => {
-  return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
-      </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
-        <a
-          href="https://nextjs.org/"
-          className="underline hover:text-success duration-200 transition-colors"
-        >
-          Next.js
-        </a>{' '}
-        and {CMS_NAME}.
-      </h4>
-    </section>
-  )
+    return (
+        <>
+            {/*<Header/>*/}
+            <section className="flex-col flex items-center max-w-lg mx-auto py-40">
+                <div className="bg-cover h-48 w-48 rounded-full" style={{backgroundImage: `url("/images/profile.jpg")`}}/>
+                <h1 className="text-4xl font-bold tracking-tighter leading-tight mt-8">
+                    Hey, I’m Jalal Azimi.
+                </h1>
+                <p className="text-center text-lg mt-5 md:pl-8">
+                    I’m a developer and designer living in Dublin, Ireland. You've found my personal slice of the
+                    internet – everything you want to know and more is here.
+                </p>
+            </section>
+        </>
+    )
 }
 
 export default Intro
